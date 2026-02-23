@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E908DF8-A491-4B68-836B-5721741ED467}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>firstForm</RootNamespace>
+    <AssemblyName>firstForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVet.Designer.cs">
+      <DependentUpon>AddVet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPECIES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPECIES.Designer.cs">
+      <DependentUpon>SPECIES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vet.cs" />
+    <Compile Include="Validator.cs" />
+    <EmbeddedResource Include="AddVet.resx">
+      <DependentUpon>AddVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SPECIES.resx">
+      <DependentUpon>SPECIES.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DotfuscatorAttribute.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.EFOracleFunctions.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OnChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleAccessToken.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleBulkCopy.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleBulkCopyColumnMapping.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleBulkCopyColumnMappingCollection.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleClientFactory.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleCommand.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleConfiguration.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleConnection+OracleDRCPPurity.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleConnection.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleConnectionOpenEventArgs.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleConnectionOpenEventHandler.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleCredential.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleDataAdapter.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleDataReader.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleDataSourceCollection.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleDataSourceEnumerator.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleDependency.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleError.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleErrorCollection.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleException.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleGlobalization.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleHAEventArgs.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleHAEventHandler.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleInfoMessageEventArgs.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleInfoMessageEventHandler.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleLogicalTransaction.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleNotificationEventArgs.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleNotificationRequest.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleOnsServerCollection.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleParameter.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleParameterCollection.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleParameterTypeConverter.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OraclePermission.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OraclePermissionAttribute.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleRefreshAccessTokenEventArgs.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleRefreshAccessTokenEventHandler.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleRowsCopiedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleRowsCopiedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleRowUpdatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleRowUpdatedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleRowUpdatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleRowUpdatingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleTransaction.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleXmlQueryProperties.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Client.OracleXmlSaveProperties.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.INullable.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleBFile.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleBinary.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleBlob.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleBoolean.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleClob.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleDate.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleDecimal.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleIntervalDS.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleIntervalYM.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleNullValueException.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleRefCursor.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleString.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleTimeStamp.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleTimeStampLTZ.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleTimeStampTZ.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleTruncateException.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleTypeException.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleXmlStream.datasource" />
+    <None Include="Properties\DataSources\Oracle.ManagedDataAccess.Types.OracleXmlType.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Common.IOracleMetadata.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Common.OracleLpColumn.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Common.OracleLpTable.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Common.OracleLpTableColumns.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Common.OracleMetadata.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.DataIntegrityAlgorithm.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.DES112.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.DES168.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.EncryptionAlgorithm.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.MD5.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.SHA1.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.SHA256.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.SHA384.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.Secure.Network.SHA512.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.ServiceObjects.XmlTypeReader.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.FlexibleSizeLongArray.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpBindParameter.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpCallStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpColumnDescriptor.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpCreateStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpDeleteStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpException.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpExecuteStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpExplainPlanStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpInsertStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpMergeStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpName.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpSelectStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpStatementElement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpTextFragment.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.LocalParsing.OracleLpUpdateStatement.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.OracleLpParser.datasource" />
+    <None Include="Properties\DataSources\OracleInternal.SqlAndPlsqlParser.ParserException.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
